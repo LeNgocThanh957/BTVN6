@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm min của các giá trị chẵn</title>
+</head>
+<body>
+
+<script>
+    let array = [];
+    let arrayB = [];
+    let soLuong = +prompt("Nhập vào số lượng phần tử của mảng: ");
+    for (let i = 0; i < soLuong; i++) {
+        let a = +prompt("Nhập phần tử thứ " + (i + 1));
+        array.push(a);
+        if (array[i] % 2 === 0) {
+            arrayB.push(a);
+        }
+    }
+    document.write("Array [" + array + "]");
+    document.write("<br>Danh sách những phần tử chẵn có ở trong mảng: " + arrayB);
+
+    let min = arrayB[0];
+    for (let i = 0; i < arrayB.length; i++) {
+        if (arrayB[i] < min) {
+            min = arrayB[i];
+        }
+    }
+    document.write("<br>" + "Giá trị min của các phần tử chẵn là : " + min);
+</script>
+</body>
+</html>

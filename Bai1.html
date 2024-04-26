@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm min</title>
+</head>
+<body>
+
+<script>
+    let array = [];
+    let soLuong = +prompt("Nhập vào số lượng phần tử của mảng: ");
+    for (let i = 0; i < soLuong; i++) {
+        let a = +prompt("Nhập phần tử thứ " + (i + 1));
+        array.push(a);
+    }
+    document.write("Array [" + array + "]");
+
+    let min = array[0];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] < min) {
+            min = array[i];
+        }
+    }
+    document.write("<br>"+"Giá trị min: " + min);
+</script>
+</body>
+</html>

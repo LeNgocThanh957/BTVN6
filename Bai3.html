@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra mảng có luôn tăng không</title>
+</head>
+<body>
+<script>
+    function kiemTraMangLuonTang(arr) {
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] <= arr[i - 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Sử dụng hàm kiểm tra
+    let array1 = [];
+    let soLuong = +prompt("Nhập vào số lượng phần tử của mảng: ");
+    for (let i = 0; i < soLuong; i++) {
+        let a = +prompt("Nhập phần tử thứ " + (i + 1));
+        array1.push(a);
+    }
+    document.write("Array [ " + array1 + " ]" + "<br>" + " Mảng này luôn tăng: ");
+    document.write(kiemTraMangLuonTang(array1));
+
+
+</script>
+</body>
+</html>
